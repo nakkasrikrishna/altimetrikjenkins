@@ -3,18 +3,14 @@ pipelene {
     stages {
         stage("Cleaning Stage") {
             steps {
-                bat "mvn clean"
+                echo 'this is cleaning stage'
             }
         }
         stage("Testing Stage") {
             steps {
-                bat "mvn test"
+                echo 'this is testing stage'
             }
         }
-        stage("Packaging Satage") {
-            steps {
-                bat "mvn package"
-            }
-        }
+       
     }
 }
